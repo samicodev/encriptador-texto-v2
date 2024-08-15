@@ -1,0 +1,336 @@
+:root {
+  --color-alura: #0a3871;
+  --color-texto: #495057;
+  --fuente-serif: sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #F3F5FC;
+  box-sizing: border-box;
+  font-family: var(--fuente-serif);
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  margin: 2% 2%;
+}
+
+.section__logo{
+  /* background-color: salmon; */
+  width: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo__alura{
+  height: 40px;
+}
+
+/* ============= SECTION ENTRADA DE TEXTO ============= */
+.section__entrada{
+  /* background-color: aquamarine; */
+  width: 65%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.entrada__textarea--encriptar{
+  width: 90%;
+  color: var(--color-alura);
+  background: none;
+  border: 0;
+  resize: none;
+  font-family: var(--fuente-serif);
+  font-size: 25px;
+  height: 60%;
+  align-self: center;
+}
+
+.entrada__textarea--encriptar::placeholder {
+  color: var(--color-alura);
+}
+
+.entrada__textarea--encriptar:focus {
+  outline: 0;
+}
+
+.entrada__mensaje {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.entrada__alert-img {
+  width: 15px;
+  margin-right: 10px; 
+}
+
+.entrada__alert-text{
+  color: var(--color-texto);
+  font-size: 12px;
+}
+
+.entrada__buttons{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.main__buttons{
+  cursor: pointer;
+  padding: 15px 10px;
+  border-radius: 15px;
+}
+
+.encriptador__button--encriptar {
+  width: 48%;
+  color: #fff;
+  background-color: var(--color-alura);
+  border: 1px solid;
+}
+
+.encriptador__button--desencriptar {
+  width: 48%;
+  color: var(--color-alura);
+  background-color: #D8DFE9;
+  border: 1px solid;
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+.form {
+  width: 90%;
+  margin: 20px 0px 10px 0px;
+  box-shadow: -1px 1px 15px 0.6px #e0e3f0;
+}
+
+.drop-container {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--color-texto);
+  cursor: pointer;
+}
+
+.drop-container:hover {
+  border: 2px dashed var(--color-alura);
+  background: rgba(29, 89, 138, 0.164);
+}
+
+.drop-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#file-input {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 2px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(8, 8, 8, 0.288);
+}
+
+#file-input::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: var(--color-alura);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* ============= SECTION RESULTADO SALIDA DE TEXTO ============= */
+.section__resultado{
+  /* background-color: mediumseagreen ; */
+  width: 30%;
+  height: 100vh;
+  background-color: #fff;
+  border-radius: 23px;
+  box-shadow: -1px 1px 15px 0.6px #e0e3f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultado__munieco{
+  width: 90%;
+}
+
+.resultado__informacion{
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: var(--color-texto);
+}
+
+.resultado__texto-negrita{
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+
+.resultado__texto-mensaje{
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.resultado__textarea--desencriptar{
+  color: var(--color-texto);
+  font-family: var(--fuente-serif);
+  border: 0;
+  background: none;
+  resize: none;
+  font-size: 20px;
+  width: 90%;
+  height: 80%;
+}
+
+.resultado__textarea--desencriptar:focus {
+  outline: 0;
+}
+
+.salida__buttons{
+  width: 90%;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.resultado__button--descargar {
+  display: inline-block;
+  width: 10%;
+  background-color: var(--color-alura);
+  color: #D8DFE9;
+  border: 1px solid;
+  text-align: center;
+}
+
+.resultado__button--copiar {
+  width: 80%;
+  background-color: #fff;
+  color: var(--color-alura);
+  border: 1px solid;
+}
+
+.resultado__texto-copiado{
+  background-color: var(--color-alura);
+  color: #fff;
+  align-self: center;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-family: var(--fuente-serif);
+  position: absolute;
+}
+
+/* ============= PIE DE PAGINA ============= */
+.footer {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-alura);
+}
+
+.footer__informacion {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--fuente-serif);
+  text-align: center;
+}
+
+.footer__social--link{
+  color: #fff;
+  padding: 5px;
+}
+
+/* ============= Media query para diseño responsive ============= */
+@media (max-width: 770px) {
+  main {
+    margin: 5% 10%;
+    flex-direction: column;
+  }
+
+  .section__entrada{
+    width: 100%;
+    height: 600px;
+  }
+
+  .entrada__textarea--encriptar{
+    height: 55%;
+  }
+
+  .section__resultado{
+    width: 100%;
+    height: 200px;
+  }
+
+  .resultado__munieco{
+    display: none;
+  }
+
+  .resultado__textarea--desencriptar{
+    height: 50%;
+  }
+
+  .resultado__button--descargar {
+    margin-top: 15px;
+  }
+
+  .resultado__button--copiar {
+    margin-top: 15px;
+  }
+  
+
+}
+
+@media (max-width: 490px) {
+  .footer{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .section__entrada{
+    height: 700px;
+  }
+
+  .entrada__buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .encriptador__button--encriptar {
+    width: 100%;
+  }
+
+  .encriptador__button--desencriptar {
+    width: 100%;
+  }
+
+}
